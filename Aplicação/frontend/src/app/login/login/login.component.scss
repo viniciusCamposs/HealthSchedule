@@ -1,0 +1,147 @@
+
+.fundo {
+  display: flex;
+  background-color: var(--cor-de-fundo);
+  height: 100vh;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-login {
+  width: 117rem;
+  display: flex;
+  flex-direction: column;
+  height: 85%;
+  background-color: #fff;
+  border-radius: 2.5rem;
+  position: relative;
+  padding: 1rem;
+  font-family: 'Montserrat', sans-serif;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.login-footer {
+  background-color: var(--primary);
+  height: 2rem;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  border-radius: 0  0 2.5rem 2.5rem;
+  margin-left: -1rem;
+}
+
+.box {
+  width: 50%;
+  height: 775px;
+  padding: 5rem;
+}
+
+.box:first-child h1 {
+  font-size: 6rem;
+  letter-spacing: .5rem;
+  font-weight: normal;
+}
+
+.box:first-child h1:first-child{
+  color: rgb(203,210,215);
+}
+
+.box:first-child h1:nth-child(2) {
+  color: var(--primary);
+  font-weight: 500;
+  margin-top: 3rem;
+}
+
+.box:first-child p {
+  text-align: justify;
+  margin-top: 3rem;
+  color: #ccc;
+  letter-spacing: .2rem;
+  font-size: 1.8rem;
+}
+
+.box:last-child {
+  align-items: center;
+}
+
+.box:last-child h1 {
+  letter-spacing: .3rem;
+  color: rgb(155,169,183);
+  font-weight: 600;
+}
+
+.box:last-child p {
+  color: rgb(180,180,180);
+}
+
+.box:last-child form {
+  margin-top: 10rem;
+}
+
+
+/* Efeitos do formulário de login */
+
+.input-content {
+  position: relative;
+  height: 5rem;
+  color: #92959b;
+
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
+
+  width: 40rem;
+}
+
+.input-content input {
+  border: none;
+  outline: none;
+  width: 100%;
+  height: 100%;
+  padding-top: 2rem;
+}
+
+.input-content label {
+  position: absolute;
+
+  height: 100%;
+  width: 100%;
+
+  top: 0;
+
+  pointer-events: none;
+  border-bottom: 0.1rem solid #eee;
+}
+
+.input-content label::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.1rem;
+  height: 100%;
+  width: 100%;
+  border-bottom: 0.3rem solid var(--primary);
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+
+.content-name {
+  position: absolute;
+  bottom: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.input-content input:focus + .label-name .content-name,
+.input-content input:valid + .label-name .content-name {
+  transform: translateY(-120%);
+  font-size: 1.4rem;
+}
+
+.input-content input:focus + .label-name::after,
+.input-content input:valid + .label-name::after {
+  transform: translateX(0);
+}
+
+
