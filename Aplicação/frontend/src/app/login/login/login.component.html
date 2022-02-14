@@ -15,6 +15,7 @@
         <p>Bem vindo! Entre em sua conta.</p>
 
         <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+          <p *ngIf="submitted">Usuário ou senha incorretos!</p>
           <div class="input-content">
             <input
               type="text"
@@ -30,7 +31,7 @@
 
           <div class="input-content">
             <input
-              type="{{ inputPasswordType ? 'senha' : 'text' }}"
+              type="{{ inputPasswordType ? 'password' : 'text' }}"
               name="name"
               autocomplete="off"
               required
@@ -57,7 +58,14 @@
               ></i>
             </span>
           </div>
+
+          <div class="botoesLogin">
+            <button type="submit">Entrar</button>
+            <button type="button">Registrar-se</button>
+          </div>
         </form>
+
+        <button type="button" class="contato">Entre em contato</button>
       </div>
     </div>
     <div class="login-footer">
