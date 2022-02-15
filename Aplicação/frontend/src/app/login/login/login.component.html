@@ -43,7 +43,7 @@
 
             <span
               class="content-icon"
-              (click)="changeInputTextType()"
+              (click)="changeInputTextType(true)"
               *ngIf="loginForm.get('senha').value.length > 0"
             >
               <i
@@ -59,9 +59,42 @@
             </span>
           </div>
 
+          <div class="input-content" *ngIf="cadastro">
+            <input
+              type="{{ inputConfPasswordType ? 'password' : 'text' }}"
+              name="name"
+              autocomplete="off"
+              required
+              formControlName="conf_senha"
+            />
+            <label for="name" class="label-name">
+              <span class="content-name">Confirme a senha</span>
+            </label>
+
+            <span
+              class="content-icon"
+              (click)="changeInputTextType()"
+              *ngIf="loginForm.get('conf_senha').value.length > 0"
+            >
+              <i
+                class="fa fa-eye fa-lg"
+                aria-hidden="true"
+                *ngIf="inputConfPasswordType"
+              ></i>
+              <i
+                class="fa fa-eye-slash fa-lg"
+                aria-hidden="true"
+                *ngIf="!inputConfPasswordType"
+              ></i>
+            </span>
+          </div>
+
           <div class="botoesLogin">
-            <button type="submit">Entrar</button>
-            <button type="button">Registrar-se</button>
+            <button type="submit" *ngIf="!cadastro">Entrar</button>
+            <button type="button" *ngIf="!cadastro" (click)="!cadastro = true">Registrar-se</button>
+
+            <button type="button" *ngIf="cadastro" (click)="cadastro = false">Voltar</button>
+            <button type="submit" *ngIf="cadastro" (click)="clickVoltar()">Cadastrar-se</button>
           </div>
         </form>
 

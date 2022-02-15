@@ -11,8 +11,10 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class LoginComponent implements OnInit {
 
   inputPasswordType = true;
+  inputConfPasswordType = true;
   loginForm: any;
   submitted = false;
+  cadastro = false;
 
   constructor(
     private fb: FormBuilder,
@@ -21,17 +23,39 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
     this.loginForm = this.fb.group({
       name: ['', [Validators.required, Validators.minLength(3)]],
-      senha: ['', [Validators.required, Validators.minLength(5)]]
+      senha: ['', [Validators.required, Validators.minLength(5)]],
+      conf_senha: ['', [Validators.required, Validators.minLength(5)]]
     });
   }
 
-  public changeInputTextType(): void {
-    this.inputPasswordType = !this.inputPasswordType;
+  public changeInputTextType(senha: boolean = false): void {
+    if (senha) {
+      this.inputPasswordType = !this.inputPasswordType;
+    } else {
+      this.inputConfPasswordType = !this.inputConfPasswordType;
+    }
   }
 
 
   public onSubmit(): void {
     this.submitted = true;
+  }
+
+  public cadastrarUsuario(): void {
+    this.cadastro = true;
+  }
+
+  public getButtonRegisterType(): string {
+    if (this.cadastro) {
+      return 'submit';
+    } else {
+      return 'button';
+    }
+  }
+
+  public clickVoltar(): void {
+    this.cadastro = false;
+    this.submitted = false;
   }
 
 }
