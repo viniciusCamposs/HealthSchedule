@@ -15,7 +15,11 @@
         <p>Bem vindo! Entre em sua conta.</p>
 
         <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-          <p *ngIf="submitted">Usuário ou senha incorretos!</p>
+
+          <div class="validationMessages" *ngIf="submitted">
+            <p *ngFor="let message of validationMessage">{{ message }}</p>
+          </div>
+
           <div class="input-content">
             <input
               type="text"
@@ -94,7 +98,7 @@
             <button type="button" *ngIf="!cadastro" (click)="!cadastro = true">Registrar-se</button>
 
             <button type="button" *ngIf="cadastro" (click)="cadastro = false">Voltar</button>
-            <button type="submit" *ngIf="cadastro" (click)="clickVoltar()">Cadastrar-se</button>
+            <button type="submit" *ngIf="cadastro">Cadastrar-se</button>
           </div>
         </form>
 

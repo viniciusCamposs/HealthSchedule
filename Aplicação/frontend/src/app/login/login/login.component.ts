@@ -15,6 +15,7 @@ export class LoginComponent implements OnInit {
   loginForm: any;
   submitted = false;
   cadastro = false;
+  validationMessage = [ 'Usuário ou senha incorretos!' ];
 
   constructor(
     private fb: FormBuilder,
