@@ -1,111 +1,72 @@
-<div class="fundo">
-  <div class="container-login">
-    <div class="hgroup">
-      <div class="vgroup box">
-        <h1>Agenda</h1>
-        <h1>De Saúde</h1>
+<div class="container-login">
+  <div class="hgroup">
+    <div class="vgroup box">
+      <h1>Agenda</h1>
+      <h1>De Saúde</h1>
 
-        <p>O HealthSchedule é um sistema de gereciamento de agenda médica, visando agregar e facilitar no dia a dia de clinicas e consultórios médicos.</p>
+      <p>O HealthSchedule é um sistema de gereciamento de agenda médica, visando agregar e facilitar no dia a dia de
+        clinicas e consultórios médicos.</p>
 
-        <img src="../../assets/logo-login.png" alt="Logo da tela de login">
-      </div>
-
-      <div class="vgroup box">
-        <h1>HealthSchedule</h1>
-        <p>Bem vindo! Entre em sua conta.</p>
-
-        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-
-          <div class="validationMessages" *ngIf="submitted">
-            <p *ngFor="let message of validationMessage">{{ message }}</p>
-          </div>
-
-          <div class="input-content">
-            <input
-              type="text"
-              name="name"
-              autocomplete="off"
-              required
-              formControlName="name"
-            />
-            <label for="name" class="label-name">
-              <span class="content-name">Usuário</span>
-            </label>
-          </div>
-
-          <div class="input-content">
-            <input
-              type="{{ inputPasswordType ? 'password' : 'text' }}"
-              name="name"
-              autocomplete="off"
-              required
-              formControlName="senha"
-            />
-            <label for="name" class="label-name">
-              <span class="content-name">Senha</span>
-            </label>
-
-            <span
-              class="content-icon"
-              (click)="changeInputTextType(true)"
-              *ngIf="loginForm.get('senha').value.length > 0"
-            >
-              <i
-                class="fa fa-eye fa-lg"
-                aria-hidden="true"
-                *ngIf="inputPasswordType"
-              ></i>
-              <i
-                class="fa fa-eye-slash fa-lg"
-                aria-hidden="true"
-                *ngIf="!inputPasswordType"
-              ></i>
-            </span>
-          </div>
-
-          <div class="input-content" *ngIf="cadastro">
-            <input
-              type="{{ inputConfPasswordType ? 'password' : 'text' }}"
-              name="name"
-              autocomplete="off"
-              required
-              formControlName="conf_senha"
-            />
-            <label for="name" class="label-name">
-              <span class="content-name">Confirme a senha</span>
-            </label>
-
-            <span
-              class="content-icon"
-              (click)="changeInputTextType()"
-              *ngIf="loginForm.get('conf_senha').value.length > 0"
-            >
-              <i
-                class="fa fa-eye fa-lg"
-                aria-hidden="true"
-                *ngIf="inputConfPasswordType"
-              ></i>
-              <i
-                class="fa fa-eye-slash fa-lg"
-                aria-hidden="true"
-                *ngIf="!inputConfPasswordType"
-              ></i>
-            </span>
-          </div>
-
-          <div class="botoesLogin">
-            <button type="submit" *ngIf="!cadastro">Entrar</button>
-            <button type="button" *ngIf="!cadastro" (click)="!cadastro = true">Registrar-se</button>
-
-            <button type="button" *ngIf="cadastro" (click)="cadastro = false">Voltar</button>
-            <button type="submit" *ngIf="cadastro">Cadastrar-se</button>
-          </div>
-        </form>
-
-        <button type="button" class="contato">Entre em contato</button>
-      </div>
+      <img src="../../assets/logo-login.png" alt="Logo da tela de login">
     </div>
-    <div class="login-footer">
+
+    <div class="vgroup box">
+      <h1>HealthSchedule</h1>
+      <p>Bem vindo! Entre em sua conta.</p>
+
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+
+        <div class="validationMessages" *ngIf="submitted">
+          <p *ngFor="let message of validationMessage">{{ message }}</p>
+        </div>
+
+        <div class="input-content">
+          <input type="text" name="name" autocomplete="off" required formControlName="name" />
+          <label for="name" class="label-name">
+            <span class="content-name">Usuário</span>
+          </label>
+        </div>
+
+        <div class="input-content">
+          <input type="{{ inputPasswordType ? 'password' : 'text' }}" name="name" autocomplete="off" required
+            formControlName="senha" />
+          <label for="name" class="label-name">
+            <span class="content-name">Senha</span>
+          </label>
+
+          <span class="content-icon" (click)="changeInputTextType(true)"
+            *ngIf="loginForm.get('senha').value.length > 0">
+            <i class="fa fa-eye fa-lg" aria-hidden="true" *ngIf="inputPasswordType"></i>
+            <i class="fa fa-eye-slash fa-lg" aria-hidden="true" *ngIf="!inputPasswordType"></i>
+          </span>
+        </div>
+
+        <div class="input-content" *ngIf="cadastro">
+          <input type="{{ inputConfPasswordType ? 'password' : 'text' }}" name="name" autocomplete="off" required
+            formControlName="conf_senha" />
+          <label for="name" class="label-name">
+            <span class="content-name">Confirme a senha</span>
+          </label>
+
+          <span class="content-icon" (click)="changeInputTextType()"
+            *ngIf="loginForm.get('conf_senha').value.length > 0">
+            <i class="fa fa-eye fa-lg" aria-hidden="true" *ngIf="inputConfPasswordType"></i>
+            <i class="fa fa-eye-slash fa-lg" aria-hidden="true" *ngIf="!inputConfPasswordType"></i>
+          </span>
+        </div>
+
+        <div class="botoesLogin">
+          <button type="submit" *ngIf="!cadastro">Entrar</button>
+          <button type="button" *ngIf="!cadastro" (click)="!cadastro = true">Registrar-se</button>
+
+          <button type="button" *ngIf="cadastro" (click)="cadastro = false">Voltar</button>
+          <button type="submit" *ngIf="cadastro">Cadastrar-se</button>
+        </div>
+      </form>
+
+      <button type="button" class="contato">Entre em contato</button>
     </div>
+  </div>
+  <div class="login-footer">
   </div>
 </div>
