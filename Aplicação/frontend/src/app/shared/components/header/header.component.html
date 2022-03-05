@@ -1,24 +1,69 @@
 <div class="header-container">
-  <button class="menu-button" mat-button [matMenuTriggerFor]="afterMenu" class="menu-button">Cadastros</button>
+  <button mat-button class="menu-button">
+    <mat-icon>view_agenda</mat-icon>
+    Agenda Médica
+  </button>
+
+  <button class="menu-button" mat-button [matMenuTriggerFor]="afterMenu">
+    Cadastros
+  </button>
   <mat-menu #afterMenu="matMenu" xPosition="after">
-    <button mat-menu-item>Usuários</button>
-    <button mat-menu-item>Pacientes</button>
-    <button mat-menu-item>Medicos</button>
-    <button mat-menu-item>Especialidades</button>
-    <button mat-menu-item>Tipos de Agendamento</button>
-    <button mat-menu-item>Convênios</button>
-    <button mat-menu-item>Consultórios</button>
-    <button mat-menu-item>Empresas</button>
+    <button mat-menu-item>
+      <mat-icon>account_circle</mat-icon>
+      Usuários
+    </button>
+    <mat-divider></mat-divider>
+    <button mat-menu-item>
+      <mat-icon>face</mat-icon>
+      Pacientes
+    </button>
+    <mat-divider></mat-divider>
+    <button mat-menu-item>
+      <mat-icon>masks</mat-icon>
+      Medicos
+    </button>
+    <mat-divider></mat-divider>
+    <button mat-menu-item>
+      <mat-icon>add_circle</mat-icon>
+      Especialidades
+    </button>
+    <mat-divider></mat-divider>
+    <button mat-menu-item>
+      <mat-icon>add_circle</mat-icon>
+      Tipos de Agendamento
+    </button>
+    <mat-divider></mat-divider>
+    <button mat-menu-item>
+      <mat-icon>domain_add</mat-icon>
+      Convênios
+    </button>
+    <mat-divider></mat-divider>
+    <button mat-menu-item>
+      <mat-icon>domain_add</mat-icon>
+      Consultórios
+    </button>
+    <mat-divider></mat-divider>
+    <button mat-menu-item>
+      <mat-icon>domain_add</mat-icon>
+      Empresas
+    </button>
   </mat-menu>
 
   <button mat-icon-button aria-label="Example icon button with a home icon" class="user-button" [matMenuTriggerFor]="menu">
-    <mat-icon>account_circle</mat-icon>
+    <mat-icon>home</mat-icon>
   </button>
   <mat-menu #menu="matMenu" class="user-menu">
-    <button mat-menu-item>Usuário Logado: </button>
+    <button mat-menu-item>
+      <mat-icon>account_circle</mat-icon>
+      Usuário Logado:
+    </button>
+    <button mat-menu-item>
+      <mat-icon>domain</mat-icon>
+      Consultório Logado:
+    </button>
     <mat-divider></mat-divider>
     <button mat-menu-item>
-      <mat-icon>input</mat-icon>
+      <mat-icon>exit_to_app</mat-icon>
       Sair
     </button>
   </mat-menu>
