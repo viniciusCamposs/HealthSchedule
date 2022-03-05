@@ -4,8 +4,6 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppMaterialModule } from './modules/app-material.module';
 
-
-
 @NgModule({
   declarations: [],
   imports: [

@@ -1,0 +1,32 @@
+.header-container {
+  width: 100vw;
+  height: 6rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.menu-button::after {
+  content: "";
+  opacity: 0;
+  border-bottom: .2rem solid var(--primary);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.menu-button:hover::after {
+  opacity: 1;
+}
+
+.user-button {
+  position: absolute;
+  right: 2rem;
+}
+
+::ng-deep .user-menu {
+  width: 30rem;
+}

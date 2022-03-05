@@ -1,0 +1,25 @@
+<div class="header-container">
+  <button class="menu-button" mat-button [matMenuTriggerFor]="afterMenu" class="menu-button">Cadastros</button>
+  <mat-menu #afterMenu="matMenu" xPosition="after">
+    <button mat-menu-item>Usuários</button>
+    <button mat-menu-item>Pacientes</button>
+    <button mat-menu-item>Medicos</button>
+    <button mat-menu-item>Especialidades</button>
+    <button mat-menu-item>Tipos de Agendamento</button>
+    <button mat-menu-item>Convênios</button>
+    <button mat-menu-item>Consultórios</button>
+    <button mat-menu-item>Empresas</button>
+  </mat-menu>
+
+  <button mat-icon-button aria-label="Example icon button with a home icon" class="user-button" [matMenuTriggerFor]="menu">
+    <mat-icon>account_circle</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu" class="user-menu">
+    <button mat-menu-item>Usuário Logado: </button>
+    <mat-divider></mat-divider>
+    <button mat-menu-item>
+      <mat-icon>input</mat-icon>
+      Sair
+    </button>
+  </mat-menu>
+</div>
