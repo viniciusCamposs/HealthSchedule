@@ -1,7 +1,9 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ConveniosComponent } from './convenios/convenios.component';
+import { NgModule } from '@angular/core';
+
 import { ConveniosEdicaoComponent } from './convenios-edicao/convenios-edicao.component';
+import { ConveniosRoutingModule } from './convenios-routing.module';
+import { ConveniosComponent } from './convenios/convenios.component';
 
 
 
@@ -11,7 +13,8 @@ import { ConveniosEdicaoComponent } from './convenios-edicao/convenios-edicao.co
     ConveniosEdicaoComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    ConveniosRoutingModule
   ]
 })
 export class ConveniosModule { }

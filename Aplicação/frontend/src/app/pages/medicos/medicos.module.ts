@@ -1,7 +1,9 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MedicosComponent } from './medicos/medicos.component';
+import { NgModule } from '@angular/core';
+
 import { MedicosEdicaoComponent } from './medicos-edicao/medicos-edicao.component';
+import { MedicosRoutingModule } from './medicos-routing.module';
+import { MedicosComponent } from './medicos/medicos.component';
 
 
 
@@ -11,7 +13,8 @@ import { MedicosEdicaoComponent } from './medicos-edicao/medicos-edicao.componen
     MedicosEdicaoComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    MedicosRoutingModule
   ]
 })
 export class MedicosModule { }

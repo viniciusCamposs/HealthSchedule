@@ -1,7 +1,9 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { EspecialidadesComponent } from './especialidades/especialidades.component';
+import { NgModule } from '@angular/core';
+
 import { EspecialidadesEdicaoComponent } from './especialidades-edicao/especialidades-edicao.component';
+import { EspecialidadesRoutingModule } from './especialidades-routing.module';
+import { EspecialidadesComponent } from './especialidades/especialidades.component';
 
 
 
@@ -11,7 +13,8 @@ import { EspecialidadesEdicaoComponent } from './especialidades-edicao/especiali
     EspecialidadesEdicaoComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    EspecialidadesRoutingModule
   ]
 })
 export class EspecialidadesModule { }

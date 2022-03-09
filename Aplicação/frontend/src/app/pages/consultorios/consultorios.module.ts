@@ -1,7 +1,9 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ConsultoriosComponent } from './consultorios/consultorios.component';
+import { NgModule } from '@angular/core';
+
 import { ConsultoriosEdicaoComponent } from './consultorios-edicao/consultorios-edicao.component';
+import { ConsultoriosRoutingModule } from './consultorios-routing.module';
+import { ConsultoriosComponent } from './consultorios/consultorios.component';
 
 
 
@@ -11,7 +13,8 @@ import { ConsultoriosEdicaoComponent } from './consultorios-edicao/consultorios-
     ConsultoriosEdicaoComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    ConsultoriosRoutingModule
   ]
 })
 export class ConsultoriosModule { }

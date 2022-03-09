@@ -1,7 +1,9 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { PacientesComponent } from './pacientes/pacientes.component';
+import { NgModule } from '@angular/core';
+
 import { PacientesEdicaoComponent } from './pacientes-edicao/pacientes-edicao.component';
+import { PacientesRoutingModule } from './pacientes-routing.module';
+import { PacientesComponent } from './pacientes/pacientes.component';
 
 
 
@@ -11,7 +13,8 @@ import { PacientesEdicaoComponent } from './pacientes-edicao/pacientes-edicao.co
     PacientesEdicaoComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    PacientesRoutingModule
   ]
 })
 export class PacientesModule { }

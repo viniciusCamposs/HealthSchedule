@@ -1,7 +1,9 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TiposAgendamentoComponent } from './tipos-agendamento/tipos-agendamento.component';
+import { NgModule } from '@angular/core';
+
 import { TiposAgendamentoEdicaoComponent } from './tipos-agendamento-edicao/tipos-agendamento-edicao.component';
+import { TiposAgendamentoRouting } from './tipos-agendamento-routing.module';
+import { TiposAgendamentoComponent } from './tipos-agendamento/tipos-agendamento.component';
 
 
 
@@ -11,7 +13,8 @@ import { TiposAgendamentoEdicaoComponent } from './tipos-agendamento-edicao/tipo
     TiposAgendamentoEdicaoComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    TiposAgendamentoRouting
   ]
 })
 export class TiposAgendamentoModule { }

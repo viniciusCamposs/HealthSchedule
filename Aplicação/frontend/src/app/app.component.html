@@ -1,8 +1,9 @@
-<div class="system-background">
+<div class="header-container" *ngIf="true">
   <app-header></app-header>
+</div>
 
-  <router-outlet></router-outlet>
+<router-outlet></router-outlet>
 
-  <div class="loader-container" *ngIf="loaderService.isLoading | async">
-    <mat-progress-spinner class="spinner" [mode]="'indeterminate'"></mat-progress-spinner>
-  </div>
+<div class="loader-container" *ngIf="loaderService.isLoading | async">
+  <mat-progress-spinner class="spinner" [mode]="'indeterminate'"></mat-progress-spinner>
+</div>

@@ -8,42 +8,42 @@
     Cadastros
   </button>
   <mat-menu #afterMenu="matMenu" xPosition="after">
-    <button mat-menu-item>
+    <button mat-menu-item routerLink="/usuarios">
       <mat-icon>account_circle</mat-icon>
       Usuários
     </button>
     <mat-divider></mat-divider>
-    <button mat-menu-item (click)="redirecionarRota('pacientes')">
+    <button mat-menu-item [routerLink]="'/pacientes'">
       <mat-icon>face</mat-icon>
       Pacientes
     </button>
     <mat-divider></mat-divider>
-    <button mat-menu-item (click)="redirecionarRota('medicos')">
+    <button mat-menu-item routerLink="/medicos">
       <mat-icon>masks</mat-icon>
       Medicos
     </button>
     <mat-divider></mat-divider>
-    <button mat-menu-item (click)="redirecionarRota('especialidades')">
+    <button mat-menu-item routerLink="/especialidades">
       <mat-icon>add_circle</mat-icon>
       Especialidades
     </button>
     <mat-divider></mat-divider>
-    <button mat-menu-item (click)="redirecionarRota('tipos_agendamento')">
+    <button mat-menu-item routerLink="/tipos-agendamento">
       <mat-icon>add_circle</mat-icon>
       Tipos de Agendamento
     </button>
     <mat-divider></mat-divider>
-    <button mat-menu-item (click)="redirecionarRota('convenios')">
+    <button mat-menu-item routerLink="/convenios">
       <mat-icon>domain_add</mat-icon>
       Convênios
     </button>
     <mat-divider></mat-divider>
-    <button mat-menu-item (click)="redirecionarRota('consultorios')">
+    <button mat-menu-item routerLink="/consultorios">
       <mat-icon>domain_add</mat-icon>
       Consultórios
     </button>
     <mat-divider></mat-divider>
-    <button mat-menu-item (click)="redirecionarRota('empresas')">
+    <button mat-menu-item [routerLink]="'/empresas'">
       <mat-icon>domain_add</mat-icon>
       Empresas
     </button>
@@ -62,7 +62,7 @@
       Consultório Logado:
     </button>
     <mat-divider></mat-divider>
-    <button mat-menu-item (click)="redirecionarRota('login')">
+    <button mat-menu-item routerLink="/">
       <mat-icon>exit_to_app</mat-icon>
       Sair
     </button>
