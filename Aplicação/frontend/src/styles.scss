@@ -66,7 +66,7 @@ body {
 .search-bar {
   display: flex;
   align-items: center;
-  padding: 2rem 0rem;
+  padding: .5rem 0rem;
 }
 
 .search-bar button {
@@ -74,6 +74,11 @@ body {
   margin-left: .5rem;
   min-width: 10px;
   padding: 0;
+}
+
+.search-bar .mat-form-field-wrapper {
+  padding: 0rem;
+  margin: 0rem;
 }
 
 html, body { height: 100%; }
