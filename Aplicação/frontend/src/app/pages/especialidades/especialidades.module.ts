@@ -1,3 +1,4 @@
+import { AppMaterialModule } from './../../shared/modules/app-material.module';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 
@@ -16,6 +17,7 @@ import { EspecialidadesComponent } from './especialidades/especialidades.compone
   imports: [
     CommonModule,
     EspecialidadesRoutingModule,
+    AppMaterialModule,
     SharedModule
   ]
 })
