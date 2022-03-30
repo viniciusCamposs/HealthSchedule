@@ -7,7 +7,7 @@
 :root {
   font-size: 10px;
   --cor-de-fundo: rgb(240, 240, 240);
-  --primary: rgb(45,210,148);
+  --primary: rgb(45, 210, 148);
 }
 
 body {
@@ -23,11 +23,21 @@ table {
 
 .bloco {
   background-color: var(--cor-de-fundo);
-  border-radius: .3rem;
-  margin: .2rem;
-  padding: .5rem;
+  border-radius: 0.3rem;
+  margin: 0.2rem;
+  padding: 0.5rem;
   background-color: #fff;
   border: 1px solid #d3d3d3;
+}
+
+.aba {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  padding: 5px;
+  background-color: var(--cor-de-fundo);
 }
 
 .vgroup {
@@ -40,11 +50,11 @@ table {
 }
 
 .w100 {
-  width: 100%;
+  width: 100% !important;
 }
 
 .h100 {
-  width: 100%;
+  height: 100%;
 }
 
 .f1 {
@@ -52,30 +62,30 @@ table {
 }
 
 .mt {
-  margin-top: .5rem;
+  margin-top: 0.5rem;
 }
 
 .mr {
-  margin-right: .5rem;
+  margin-right: 0.5rem;
 }
 
 .mb {
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
 
 .ml {
-  margin-left: .5rem;
+  margin-left: 0.5rem;
 }
 
 .search-bar {
   display: flex;
   align-items: center;
-  padding: .5rem 0rem;
+  padding: 0.5rem 0rem;
 }
 
 .search-bar button {
   width: 4rem;
-  margin-left: .5rem;
+  margin-left: 0.5rem;
   min-width: 10px;
   padding: 0;
 }
@@ -85,5 +95,34 @@ table {
   margin: 0rem;
 }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  margin: 0.7rem !important;
+  padding: .6rem !important;
+}
+
+footer button {
+  width: 10rem;
+}
+
+footer button:first-child {
+  margin-right: 1rem;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}

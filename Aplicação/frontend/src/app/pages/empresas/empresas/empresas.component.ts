@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Empresa } from 'src/app/shared/models/Empresa';
 
 @Component({
@@ -13,9 +14,16 @@ export class EmpresasComponent implements OnInit {
     { id: 1, nome: 'MKDATA', cnpj: '1203213-233', ativo: true},
   ];
 
-  constructor() { }
+  constructor(
+    private router: Router,
+    private route: ActivatedRoute
+  ) { }
 
   ngOnInit(): void {
+  }
+
+  public adicionarEmpresa() {
+    this.router.navigate(['edicao'], { relativeTo: this.route });
   }
 
 }
