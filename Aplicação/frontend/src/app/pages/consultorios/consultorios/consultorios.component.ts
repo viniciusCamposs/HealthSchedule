@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 import { Consultorio } from './../../../shared/models/Consultorio';
 
@@ -15,9 +16,15 @@ export class ConsultoriosComponent implements OnInit {
     { id: 2, nome: 'CONSULTORIO DO MATHEUS', ativo: false}
   ];
 
-  constructor() { }
+  constructor(
+    private router: Router,
+    private route: ActivatedRoute
+  ) { }
 
   ngOnInit(): void {
   }
 
+  newClinic(): void {
+    this.router.navigate(['edicao'], { relativeTo: this.route });
+  }
 }

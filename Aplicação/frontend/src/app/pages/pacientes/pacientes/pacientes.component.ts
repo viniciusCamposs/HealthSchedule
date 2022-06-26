@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
 
 import { Paciente } from './../../../shared/models/Paciente';
 
@@ -15,9 +16,16 @@ export class PacientesComponent implements OnInit {
     { id: 2, nome: 'Matheus Augusto Gonçalves Satler', email: 'vinicius@email.com', sexo: 'M', dt_nasc: '04/02/1998', ativo: false },
   ];
 
-  constructor() { }
+  constructor(
+    private router: Router,
+    private route: ActivatedRoute
+  ) { }
 
   ngOnInit(): void {
+  }
+
+  newPacient(): void {
+    this.router.navigate(['edicao'], { relativeTo: this.route });
   }
 
 }

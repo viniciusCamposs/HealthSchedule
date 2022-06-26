@@ -8,8 +8,11 @@ const routes: Routes = [
   {
     path: '',
     component: MedicosComponent,
-    children: [{ path: 'edicao', component: MedicosEdicaoComponent }],
   },
+  {
+    path: 'edicao',
+    component: MedicosEdicaoComponent
+  }
 ];
 
 @NgModule({

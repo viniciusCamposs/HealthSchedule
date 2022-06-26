@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 import { Medico } from './../../../shared/models/Medico';
 
@@ -15,9 +16,16 @@ export class MedicosComponent implements OnInit {
   ];
   public colunas: string[] = ['id', 'nome', 'crm', 'sexo', 'cpf', 'ativo'];
 
-  constructor() { }
+  constructor(
+    private router: Router,
+    private route: ActivatedRoute
+  ) { }
 
   ngOnInit(): void {
+  }
+
+  newDoctor(): void {
+    this.router.navigate(['edicao'], { relativeTo: this.route });
   }
 
 }

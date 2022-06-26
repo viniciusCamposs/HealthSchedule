@@ -1,1 +1,33 @@
-<p>medicos-edicao works!</p>
+<div class="aba" style="margin-bottom: 6.2rem">
+  <div class="bloco h100">
+    <div class="hgroup" style="align-items: center;">
+      <mat-form-field appearance="outline" class="f1 mr">
+        <mat-label>Nome</mat-label>
+        <input type="text" matInput placeholder="Digite o nome">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="f1 mr">
+        <mat-label>CRM</mat-label>
+        <input type="text" matInput placeholder="Digite o crm">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="mr">
+        <mat-label>Genêro</mat-label>
+        <mat-select>
+          <mat-option *ngFor="let gender of genders" [value]="gender.initial">
+            {{gender.name}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="f1 mr" style="margin-right: 1.5rem;">
+        <mat-label>CPF</mat-label>
+        <input type="text" matInput placeholder="Digite o cpf">
+      </mat-form-field>
+
+      <mat-checkbox> Ativo </mat-checkbox>
+    </div>
+  </div>
+
+  <app-footer (fechar)="clickClose()"></app-footer>
+</div>

@@ -1,5 +1,7 @@
-import { Convenio } from './../../../shared/models/Convenio';
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+
+import { Convenio } from './../../../shared/models/Convenio';
 
 @Component({
   selector: 'app-convenios',
@@ -14,9 +16,16 @@ export class ConveniosComponent implements OnInit {
     { id: 2, nome: 'Leve Saúde', cnpj: '6785676575', codigo: '54353454354', ativo: false }
   ];
 
-  constructor() { }
+  constructor(
+    private router: Router,
+    private route: ActivatedRoute
+  ) { }
 
   ngOnInit(): void {
+  }
+
+  newHealthInsurance(): void {
+    this.router.navigate(['edicao'], { relativeTo: this.route });
   }
 
 }

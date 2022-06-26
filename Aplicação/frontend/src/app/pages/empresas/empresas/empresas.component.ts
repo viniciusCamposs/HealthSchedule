@@ -22,7 +22,7 @@ export class EmpresasComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  public adicionarEmpresa() {
+  public newEnterprise(): void {
     this.router.navigate(['edicao'], { relativeTo: this.route });
   }
 

@@ -7,15 +7,11 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 })
 export class SearchBarTelaDeCadastroComponent implements OnInit {
 
-  @Output() add: EventEmitter<any> = new EventEmitter();
+  @Output() clickAddNewRegister = new EventEmitter<any>();
+  @Output() clickRefresh = new EventEmitter<any>();
 
   constructor() { }
 
   ngOnInit(): void {
   }
-
-  addRegister(): void {
-    this.add.emit();
-  }
-
 }

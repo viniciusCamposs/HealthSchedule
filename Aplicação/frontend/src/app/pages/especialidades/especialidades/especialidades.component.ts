@@ -1,5 +1,7 @@
-import { Especialidade } from './../../../shared/models/Especialidade';
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+
+import { Especialidade } from './../../../shared/models/Especialidade';
 
 @Component({
   selector: 'app-especialidades',
@@ -14,9 +16,15 @@ export class EspecialidadesComponent implements OnInit {
     { id: 2, nome: 'Reumatologia', ativo: false }
   ];
 
-  constructor() { }
+  constructor(
+    private router: Router,
+    private route: ActivatedRoute
+  ) { }
 
   ngOnInit(): void {
   }
 
+  newSpeciality(): void {
+    this.router.navigate(['edicao'], { relativeTo: this.route });
+  }
 }

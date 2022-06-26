@@ -1,1 +1,40 @@
-<p>pacientes-edicao works!</p>
+<div class="aba" style="margin-bottom: 6.2rem">
+  <div class="bloco h100">
+    <div class="hgroup" style="align-items: center;">
+      <mat-form-field appearance="outline" class="f1 mr">
+        <mat-label>Nome</mat-label>
+        <input type="text" matInput placeholder="Digite o nome">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="f1 mr">
+        <mat-label>E-mail</mat-label>
+        <input type="email" matInput placeholder="Digite o e-mail">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="mr">
+        <mat-label>Genêro</mat-label>
+        <mat-select>
+          <mat-option *ngFor="let gender of genders" [value]="gender.initial">
+            {{gender.name}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" style="margin-right: 1.5rem;">
+        <mat-label>Data de Nascimento</mat-label>
+        <input matInput [matDatepicker]="datepicker">
+        <mat-datepicker-toggle matSuffix [for]="datepicker"></mat-datepicker-toggle>
+        <mat-datepicker #datepicker>
+          <mat-datepicker-actions>
+            <button mat-button matDatepickerCancel>Cancelar</button>
+            <button mat-raised-button color="primary" matDatepickerApply>Aplicar</button>
+          </mat-datepicker-actions>
+        </mat-datepicker>
+      </mat-form-field>
+
+      <mat-checkbox> Ativo </mat-checkbox>
+    </div>
+  </div>
+
+  <app-footer (fechar)="clickClose()"></app-footer>
+</div>

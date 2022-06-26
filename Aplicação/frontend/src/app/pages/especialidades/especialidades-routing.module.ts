@@ -8,8 +8,11 @@ const routes: Routes = [
   {
     path: '',
     component: EspecialidadesComponent,
-    children: [{ path: 'edicao', component: EspecialidadesEdicaoComponent }],
   },
+  {
+    path: 'edicao',
+    component: EspecialidadesEdicaoComponent
+  }
 ];
 
 @NgModule({

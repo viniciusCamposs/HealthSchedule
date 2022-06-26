@@ -1,1 +1,24 @@
-<p>convenios-edicao works!</p>
+<div class="aba" style="margin-bottom: 6.2rem">
+  <div class="bloco h100">
+    <div class="hgroup" style="align-items: center;">
+      <mat-form-field appearance="outline" class="f1 mr">
+        <mat-label>Nome</mat-label>
+        <input type="text" matInput placeholder="Digite o nome">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="f1 mr">
+        <mat-label>CNPJ</mat-label>
+        <input type="text" matInput placeholder="Digite o CNPJ">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="f1" style="margin-right: 1.5rem;">
+        <mat-label>Código</mat-label>
+        <input type="text" matInput placeholder="Digite o código">
+      </mat-form-field>
+
+      <mat-checkbox> Ativo </mat-checkbox>
+    </div>
+  </div>
+
+  <app-footer (fechar)="clickClose()"></app-footer>
+</div>

@@ -1,1 +1,19 @@
-<p>tipos-agendamento-edicao works!</p>
+<div class="aba" style="margin-bottom: 6.2rem">
+  <div class="bloco h100">
+    <div class="hgroup" style="align-items: center;">
+      <mat-form-field appearance="outline" class="f1 mr">
+        <mat-label>Nome</mat-label>
+        <input type="text" matInput placeholder="Digite o nome">
+      </mat-form-field>
+
+      <mat-radio-group aria-label="Selecione uma opção" style="margin-right: 1.5rem;">
+        <mat-radio-button value="1" class="mr"> Gera Consulta </mat-radio-button>
+        <mat-radio-button value="2" class="mr"> Gera Procedimento </mat-radio-button>
+      </mat-radio-group>
+
+      <mat-checkbox> Ativo </mat-checkbox>
+    </div>
+  </div>
+
+  <app-footer (fechar)="clickClose()"></app-footer>
+</div>

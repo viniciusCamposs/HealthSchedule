@@ -7,9 +7,12 @@ import { UsuariosComponent } from './usuarios/usuarios.component';
 const routes: Routes = [
   {
     path: '',
-    component: UsuariosComponent,
-    children: [{ path: 'edicao', component: UsuariosEdicaoComponent }],
+    component: UsuariosComponent
   },
+  {
+    path: 'edicao',
+    component: UsuariosEdicaoComponent
+  }
 ];
 
 @NgModule({

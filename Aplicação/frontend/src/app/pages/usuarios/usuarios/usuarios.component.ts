@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+
 import { Usuario } from '../../../shared/models/Usuario';
 
 @Component({
@@ -15,9 +17,16 @@ export class UsuariosComponent implements OnInit {
 
   public colunas: string[] = ['id', 'nome', 'ativo'];
 
-  constructor() { }
+  constructor(
+    private router: Router,
+    private route: ActivatedRoute
+  ) { }
 
   ngOnInit(): void {
+  }
+
+  newUser(): void {
+    this.router.navigate(['./edicao'], {relativeTo: this.route});
   }
 
 }

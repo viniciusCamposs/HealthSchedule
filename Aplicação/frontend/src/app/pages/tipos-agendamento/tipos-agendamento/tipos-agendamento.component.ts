@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 import { TipoAgendamento } from './../../../shared/models/TipoAgendamento';
 
@@ -15,9 +16,16 @@ export class TiposAgendamentoComponent implements OnInit {
     { id: 2, nome: 'Exame Renal', consulta: false, procedimento: true, ativo: false }
   ];
 
-  constructor() { }
+  constructor(
+    private router: Router,
+    private route: ActivatedRoute
+  ) { }
 
   ngOnInit(): void {
+  }
+
+  newScheduleType(): void {
+    this.router.navigate(['edicao'], { relativeTo: this.route });
   }
 
 }

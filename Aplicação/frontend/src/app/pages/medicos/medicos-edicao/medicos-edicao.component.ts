@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
+import { UtilsService } from './../../../core/services/utils/utils.service';
+import { Gender } from './../../../shared/models/Gender';
 
 @Component({
   selector: 'app-medicos-edicao',
@@ -7,9 +11,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MedicosEdicaoComponent implements OnInit {
 
-  constructor() { }
+  public genders: Gender[] = [];
+
+  constructor(
+    private router: Router,
+    private utilsService: UtilsService
+  ) { }
 
   ngOnInit(): void {
+    this.genders = this.utilsService.getGenders();
   }
 
+  clickClose(): void {
+    this.router.navigate(['medicos']);
+  }
 }

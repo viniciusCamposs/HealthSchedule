@@ -15,7 +15,7 @@ export class EmpresasEdicaoComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  clickFechar(): void {
+  clickClose(): void {
     this.router.navigate(['empresas']);
   }
 

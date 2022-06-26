@@ -14,7 +14,7 @@ export class FooterComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  clickFechar(): void {
+  clickClose(): void {
     this.fechar.emit();
   }
 }

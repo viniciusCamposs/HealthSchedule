@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-especialidades-edicao',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EspecialidadesEdicaoComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
   }
 
+  clickClose(): void {
+    this.router.navigate(['especialidades']);
+  }
 }
