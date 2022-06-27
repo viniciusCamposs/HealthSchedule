@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-
-import { Convenio } from './../../../shared/models/Convenio';
+import { Convenio } from '@root/shared/models/Convenio';
 
 @Component({
   selector: 'app-convenios',
@@ -28,4 +27,7 @@ export class ConveniosComponent implements OnInit {
     this.router.navigate(['edicao'], { relativeTo: this.route });
   }
 
+  close(): void {
+    this.router.navigate(['home']);
+  }
 }

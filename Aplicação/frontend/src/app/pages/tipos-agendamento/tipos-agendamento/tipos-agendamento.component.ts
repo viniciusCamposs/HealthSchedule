@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-
-import { TipoAgendamento } from './../../../shared/models/TipoAgendamento';
+import { TipoAgendamento } from '@root/shared/models/TipoAgendamento';
 
 @Component({
   selector: 'app-tipos-agendamento',
@@ -28,4 +27,7 @@ export class TiposAgendamentoComponent implements OnInit {
     this.router.navigate(['edicao'], { relativeTo: this.route });
   }
 
+  close(): void {
+    this.router.navigate(['home']);
+  }
 }

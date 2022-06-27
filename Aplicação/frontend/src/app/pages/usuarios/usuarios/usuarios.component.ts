@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
-import { Usuario } from '../../../shared/models/Usuario';
+import { Usuario } from '@root/shared/models/Usuario';
 
 @Component({
   selector: 'app-usuarios',
@@ -27,6 +27,10 @@ export class UsuariosComponent implements OnInit {
 
   newUser(): void {
     this.router.navigate(['./edicao'], {relativeTo: this.route});
+  }
+
+  close(): void {
+    this.router.navigate(['home']);
   }
 
 }

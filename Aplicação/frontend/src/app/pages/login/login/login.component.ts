@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core'
-
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -19,6 +19,7 @@ export class LoginComponent implements OnInit {
 
   constructor(
     private fb: FormBuilder,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -39,7 +40,8 @@ export class LoginComponent implements OnInit {
 
 
   public onSubmit(): void {
-    this.submitted = true;
+    // this.submitted = true;
+    this.router.navigate(['home']);
   }
 
   public cadastrarUsuario(): void {

@@ -9,6 +9,7 @@ export class SearchBarTelaDeCadastroComponent implements OnInit {
 
   @Output() clickAddNewRegister = new EventEmitter<any>();
   @Output() clickRefresh = new EventEmitter<any>();
+  @Output() clickClose = new EventEmitter<any>();
 
   constructor() { }
 

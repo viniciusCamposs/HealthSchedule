@@ -28,4 +28,7 @@ export class MedicosComponent implements OnInit {
     this.router.navigate(['edicao'], { relativeTo: this.route });
   }
 
+  close(): void {
+    this.router.navigate(['home']);
+  }
 }

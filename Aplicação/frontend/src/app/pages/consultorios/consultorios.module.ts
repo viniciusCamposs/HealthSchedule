@@ -1,8 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { AppMaterialModule } from '@root/shared/modules/app-material.module';
+import { SharedModule } from '@root/shared/shared.module';
 
-import { AppMaterialModule } from './../../shared/modules/app-material.module';
-import { SharedModule } from './../../shared/shared.module';
 import { ConsultoriosEdicaoComponent } from './consultorios-edicao/consultorios-edicao.component';
 import { ConsultoriosRoutingModule } from './consultorios-routing.module';
 import { ConsultoriosComponent } from './consultorios/consultorios.component';

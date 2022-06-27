@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { UtilsService } from './../../../core/services/utils/utils.service';
-import { Gender } from './../../../shared/models/Gender';
+import { UtilsService } from '@root/core/services/utils/utils.service';
+import { Gender } from '@root/shared/models/Gender';
 
 @Component({
   selector: 'app-medicos-edicao',

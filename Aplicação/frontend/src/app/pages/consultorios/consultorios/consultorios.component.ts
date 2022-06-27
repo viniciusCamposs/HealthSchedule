@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-
-import { Consultorio } from './../../../shared/models/Consultorio';
+import { Consultorio } from '@root/shared/models/Consultorio';
 
 @Component({
   selector: 'app-consultorios',
@@ -26,5 +25,9 @@ export class ConsultoriosComponent implements OnInit {
 
   newClinic(): void {
     this.router.navigate(['edicao'], { relativeTo: this.route });
+  }
+
+  close(): void {
+    this.router.navigate(['home']);
   }
 }

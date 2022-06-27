@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router';
-
-import { Paciente } from './../../../shared/models/Paciente';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Paciente } from '@root/shared/models/Paciente';
 
 @Component({
   selector: 'app-pacientes',
@@ -26,6 +25,10 @@ export class PacientesComponent implements OnInit {
 
   newPacient(): void {
     this.router.navigate(['edicao'], { relativeTo: this.route });
+  }
+
+  close(): void {
+    this.router.navigate(['home']);
   }
 
 }

@@ -1,8 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 
-import { AppMaterialModule } from './../../shared/modules/app-material.module';
-import { SharedModule } from './../../shared/shared.module';
+import { AppMaterialModule } from '@root/shared/modules/app-material.module';
+import { SharedModule } from '@root/shared/shared.module';
 import { PacientesEdicaoComponent } from './pacientes-edicao/pacientes-edicao.component';
 import { PacientesRoutingModule } from './pacientes-routing.module';
 import { PacientesComponent } from './pacientes/pacientes.component';

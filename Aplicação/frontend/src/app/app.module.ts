@@ -1,9 +1,9 @@
-import { RouterModule } from '@angular/router';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RouterModule } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,6 +12,7 @@ import { ConsultoriosModule } from './pages/consultorios/consultorios.module';
 import { ConveniosModule } from './pages/convenios/convenios.module';
 import { EmpresasModule } from './pages/empresas/empresas.module';
 import { EspecialidadesModule } from './pages/especialidades/especialidades.module';
+import { HomeModule } from './pages/home/home.module';
 import { LoginModule } from './pages/login/login.module';
 import { MedicosModule } from './pages/medicos/medicos.module';
 import { PacientesModule } from './pages/pacientes/pacientes.module';
@@ -37,6 +38,7 @@ import { SharedModule } from './shared/shared.module';
     PacientesModule,
     TiposAgendamentoModule,
     UsuariosModule,
+    HomeModule,
     ReactiveFormsModule,
     FormsModule,
     AppMaterialModule,

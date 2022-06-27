@@ -1,5 +1,5 @@
 <div class="vgroup">
-  <app-search-bar-tela-de-cadastro (clickAddNewRegister)="newSpeciality()"></app-search-bar-tela-de-cadastro>
+  <app-search-bar-tela-de-cadastro (clickAddNewRegister)="newSpeciality()" (clickClose)="close()"></app-search-bar-tela-de-cadastro>
 
   <div class="vgroup f1">
     <table mat-table [dataSource]="especialidades" class="mat-elevation-z4">
