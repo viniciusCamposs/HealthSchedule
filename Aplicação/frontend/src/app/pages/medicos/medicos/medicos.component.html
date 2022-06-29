@@ -1,7 +1,7 @@
 <div class="vgroup">
-  <app-search-bar-tela-de-cadastro (clickAddNewRegister)="newDoctor()" (clickClose)="close()"></app-search-bar-tela-de-cadastro>
+  <app-search-bar (clickAddNewRegister)="newDoctor()" (clickClose)="close()"></app-search-bar>
 
-  <div class="vgroup f1">
+  <div class="bloco f1">
     <table mat-table [dataSource]="medicos" class="mat-elevation-z4">
 
       <ng-container matColumnDef="id">

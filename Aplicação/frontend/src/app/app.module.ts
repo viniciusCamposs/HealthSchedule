@@ -8,6 +8,7 @@ import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpInterceptorService } from './core/authentication/http-interceptor.service';
+import { AgendasModule } from './pages/agendas/agendas.module';
 import { ConsultoriosModule } from './pages/consultorios/consultorios.module';
 import { ConveniosModule } from './pages/convenios/convenios.module';
 import { EmpresasModule } from './pages/empresas/empresas.module';
@@ -23,7 +24,7 @@ import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent
   ],
   imports: [
     BrowserModule,
@@ -43,6 +44,7 @@ import { SharedModule } from './shared/shared.module';
     FormsModule,
     AppMaterialModule,
     SharedModule,
+    AgendasModule,
     BrowserAnimationsModule
   ],
   providers: [

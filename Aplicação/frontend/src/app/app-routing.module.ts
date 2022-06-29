@@ -67,6 +67,11 @@ const routes: Routes = [
     loadChildren: () =>
       import('./pages/home/home.module').then((m) => m.HomeModule),
   },
+  {
+    path: 'agendas',
+    loadChildren: () =>
+      import('./pages/agendas/agendas.module').then((m) => m.AgendasModule),
+  },
 ];
 
 @NgModule({

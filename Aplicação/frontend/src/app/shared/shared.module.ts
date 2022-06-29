@@ -6,13 +6,13 @@ import { RouterModule } from '@angular/router';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import {
-  SearchBarTelaDeCadastroComponent,
-} from './components/search-bar-tela-de-cadastro/search-bar-tela-de-cadastro.component';
+  SearchBarComponent,
+} from './components/search-bar/search-bar.component';
 import { AppMaterialModule } from './modules/app-material.module';
 
 @NgModule({
-  declarations: [HeaderComponent, SearchBarTelaDeCadastroComponent, FooterComponent],
+  declarations: [HeaderComponent, SearchBarComponent, FooterComponent],
   imports: [CommonModule, AppMaterialModule, ReactiveFormsModule, RouterModule],
-  exports: [HeaderComponent, SearchBarTelaDeCadastroComponent, FooterComponent],
+  exports: [HeaderComponent, SearchBarComponent, FooterComponent],
 })
 export class SharedModule {}
