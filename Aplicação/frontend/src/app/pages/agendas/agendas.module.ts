@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { AppMaterialModule } from '@root/shared/modules/app-material.module';
 import { SharedModule } from '@root/shared/shared.module';
 
 import { AgendaEdicaoComponent } from './agenda-edicao/agenda-edicao.component';
@@ -18,7 +19,8 @@ import { ItemAgendaComponent } from './item-agenda/item-agenda.component';
   imports: [
     CommonModule,
     AgendasRoutingModule,
-    SharedModule
+    AppMaterialModule,
+    SharedModule,
   ]
 })
 export class AgendasModule { }
